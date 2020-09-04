@@ -1,1 +1,5 @@
-springcliniccourse\SpringClinicCourseApplication.class
+com\sekarre\springcliniccourse\SpringClinicCourseApplication.class
+com\sekarre\springcliniccourse\bootstrap\DataLoader.class
+com\sekarre\springcliniccourse\controllers\IndexController.class
+com\sekarre\springcliniccourse\controllers\VetController.class
+com\sekarre\springcliniccourse\controllers\OwnerController.class
