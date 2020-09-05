@@ -1,17 +1,24 @@
 package com.sekarre.springcliniccourse.model;
 
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
+@Entity
+@Table(name = "vet")
 public class Vet extends Person {
 
-    private Set<Speciality> specielities = new HashSet<>();
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "vet_specialities", joinColumns = @JoinColumn(name = "vet_id"),
+            inverseJoinColumns = @JoinColumn(name = "speciality_id"))
+    private Set<Speciality> specialities = new HashSet<>();
 
-    public Set<Speciality> getSpecielities() {
-        return specielities;
+
+    public Set<Speciality> getSpecialities() {
+        return specialities;
     }
 
-    public void setSpecielities(Set<Speciality> specielities) {
-        this.specielities = specielities;
+    public void setSpecialities(Set<Speciality> specialities) {
+        this.specialities = specialities;
     }
 }
