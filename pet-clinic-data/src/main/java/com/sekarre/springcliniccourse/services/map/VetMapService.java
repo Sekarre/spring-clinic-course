@@ -4,16 +4,18 @@ import com.sekarre.springcliniccourse.model.Speciality;
 import com.sekarre.springcliniccourse.model.Vet;
 import com.sekarre.springcliniccourse.services.SpecialtyService;
 import com.sekarre.springcliniccourse.services.VetService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
+@Profile({"default", "map"})
+public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
 
     private final SpecialtyService specialtyService;
 
-    public VetServiceMap(SpecialtyService specialtyService) {
+    public VetMapService(SpecialtyService specialtyService) {
         this.specialtyService = specialtyService;
     }
 
