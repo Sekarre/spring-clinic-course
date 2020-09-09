@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.sekarre.springcliniccourse.controllers.OwnerControllerTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.254 s - in com.sekarre.springcliniccourse.controllers.OwnerControllerTest
